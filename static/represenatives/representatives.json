@@ -1,0 +1,61 @@
+{
+  "representatives": [
+    {
+      "name": "Jaydn Medina",
+      "fraction": "AVP",
+      "unique_id": "jayden_medina_1",
+      "imageUrl": "/static/images/default_avatar.png",
+      "number": 1,
+      "role": "Minister-president",
+      "description": "Description test",
+      "socials": [
+        {
+          "type": "faFacebook",
+          "url": "https://facebook.com/test"
+        },
+        {
+          "type": "faWebsite",
+          "url": "https://test.com"
+        }
+      ]
+    },
+    {
+      "name": "Lorraine Duggan",
+      "fraction": "RED",
+      "unique_id": "lorraine_duggan_1",
+      "imageUrl": "/static/images/default_avatar.png",
+      "number": 2,
+      "role": "Minister van Sociale Zaken en Werkgelegenheid",
+      "description": "Description test",
+      "socials": [
+        {
+          "type": "faFacebook",
+          "url": "https://facebook.com/test"
+        },
+        {
+          "type": "faWebsite",
+          "url": "https://test.com"
+        }
+      ]
+    },
+    {
+      "name": "Clarice Adamson",
+      "fraction": "MEP",
+      "unique_id": "clarice_adamson_1",
+      "imageUrl": "/static/images/default_avatar.png",
+      "number": 3,
+      "role": "Minister van Volksgezondheid, Welzijn en Sport",
+      "description": "Description test",
+      "socials": [
+        {
+          "type": "faFacebook",
+          "url": "https://facebook.com/test"
+        },
+        {
+          "type": "faWebsite",
+          "url": "https://test.com"
+        }
+      ]
+    }
+  ]
+}
