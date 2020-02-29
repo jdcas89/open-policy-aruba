@@ -1,6 +1,7 @@
 import React from 'react';
 import { H1, H2 } from '../../atoms/Typography';
 import styled from 'styled-components';
+import Card from '../../atoms/Card';
 
 const Changelog = () => {
   return (
@@ -8,7 +9,7 @@ const Changelog = () => {
       <H1 p="16px" m="0" color="primary" fontSize="24px">
         Release notes
       </H1>
-      <VersionSection>
+      <Card>
         <H2 p="16px" m="0" color="primary" fontSize="18px">
           Version 0.2.0 ( 29-02-2020 )
         </H2>
@@ -20,8 +21,8 @@ const Changelog = () => {
           <li>Footer improvements</li>
           <li> Social section for representatives</li>
         </ul>
-      </VersionSection>
-      <VersionSection>
+      </Card>
+      <Card>
         <H2 p="16px" m="0" color="primary" fontSize="18px">
           Version 0.1.0 ( 28-02-2020 )
         </H2>
@@ -33,16 +34,10 @@ const Changelog = () => {
           <li>Representative detail</li>
           <li> New Motion page ( first version )</li>
         </ul>
-      </VersionSection>
+      </Card>
     </ChangeLogContainer>
   );
 };
-
-const VersionSection = styled.div`
-  background-color: white;
-  padding: 16px;
-  margin: 16px auto;
-`;
 
 const ChangeLogContainer = styled.div`
   padding: 16px;

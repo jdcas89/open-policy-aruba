@@ -4,6 +4,7 @@ import { InputContainer } from '../../atoms/Input/InputContainer';
 import { H3, Paragraph } from '../../atoms/Typography';
 import Radio from '../../atoms/Input/Radio';
 import styled from 'styled-components';
+import Card from '../../atoms/Card';
 
 const RepresentativeSection: React.FC<{
   representative: Representative;
@@ -45,12 +46,8 @@ const RepresentativeSection: React.FC<{
   );
 };
 
-const RepresentativeSectionContainer = styled.div`
+const RepresentativeSectionContainer = styled(Card)`
   display: flex;
-  padding: 16px;
-  background-color: white;
-  margin: 16px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 export default RepresentativeSection;

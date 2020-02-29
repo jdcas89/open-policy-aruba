@@ -8,6 +8,7 @@ import { H1 } from '../../atoms/Typography';
 import { useRepresentatives } from '../../../utils/useRepresentatives';
 import { mapRepresentativesToMotion } from '../../../utils/mapRepresentativesToMotions';
 import RepresentativeVote from '../RepresentativeVote';
+import Card from '../../atoms/Card';
 
 interface DynamicTemplateComponentProps {
   pageContext: {
@@ -26,7 +27,7 @@ const MotionDetail: React.FC<DynamicTemplateComponentProps> = ({
         <StyledLink type="primary" to={'/'}>
           Terug naar alle moties
         </StyledLink>
-        <MotionMetaDataCard>
+        <Card>
           <H1 color="primary" fontSize="24px">
             {data.title}
           </H1>
@@ -34,9 +35,9 @@ const MotionDetail: React.FC<DynamicTemplateComponentProps> = ({
             Fractie: {data.fraction}
           </H1>
           <MotionMetaData motion={data} />
-        </MotionMetaDataCard>
+        </Card>
 
-        <MotionMetaDataCard>
+        <Card>
           <h3>Omschrijving</h3>
           {data.description.map((d, i) => (
             <p key={i}>- {d}</p>
@@ -46,9 +47,9 @@ const MotionDetail: React.FC<DynamicTemplateComponentProps> = ({
           {data.decision.map((d, i) => (
             <p key={i}>- {d}</p>
           ))}
-        </MotionMetaDataCard>
+        </Card>
 
-        <MotionMetaDataCard>
+        <Card>
           <h1>Stemmen</h1>
           <StyledTable>
             <thead>
@@ -65,7 +66,7 @@ const MotionDetail: React.FC<DynamicTemplateComponentProps> = ({
               ))}
             </tbody>
           </StyledTable>
-        </MotionMetaDataCard>
+        </Card>
       </MotionDetailContainer>
     </PageShell>
   );
@@ -76,13 +77,6 @@ const StyledTable = styled.table`
   @media (min-width: 768px) {
     max-width: 100%;
   }
-`;
-
-const MotionMetaDataCard = styled.div`
-  margin: 16px auto;
-  padding: 16px;
-  background: #ffffff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 const MotionDetailContainer = styled.div`

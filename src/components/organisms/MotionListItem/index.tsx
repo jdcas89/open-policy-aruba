@@ -8,6 +8,7 @@ import { Representative } from '../../../utils/extractRepresentatives';
 import { getVoteIcon } from '../MotionDetail/getIcon';
 import { getVoteIconColor } from '../MotionDetail/getIconColor';
 import { FAIcon } from '../../atoms/Icon';
+import Card from '../../atoms/Card';
 
 interface MotionListItemProps {
   motion: Motion;
@@ -22,7 +23,7 @@ const MotionListItem: React.FC<MotionListItemProps> = ({
     representative &&
     motion.voting.find(v => v.id === representative.unique_id).vote;
   return (
-    <MotionListItemCard>
+    <Card>
       <StyledLink type="primary" to={`/motions/${motion.unique_id}`}>
         <Paragraph fontSize="18px">
           {motion.motionNumber}: {motion.title}
@@ -47,15 +48,8 @@ const MotionListItem: React.FC<MotionListItemProps> = ({
           />
         </H3>
       )}
-    </MotionListItemCard>
+    </Card>
   );
 };
-
-const MotionListItemCard = styled.div`
-  padding: 24px 16px;
-  margin: 24px 0;
-  background: #ffffff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-`;
 
 export default MotionListItem;

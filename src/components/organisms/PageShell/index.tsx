@@ -10,6 +10,7 @@ import { footerData } from '../../../data/footer.data';
 import { navLinks } from '../../../data/navlinks.data';
 import NavBar from '../../molecules/NavBar';
 import { H1, Paragraph } from '../../atoms/Typography';
+import media from 'styled-media-query';
 
 interface PageShellProps {
   wip?: boolean;
@@ -76,12 +77,19 @@ const Content = styled.div`
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  background-color: white;
+
+  background-color: #ecf0f1;
+  ${media.greaterThan('medium')`
+    background-color: white;
+  `}
 `;
 
 const StyledLayout = styled.div<{ theme: Theme }>`
-  background-color: white;
   height: 100%;
+  background-color: #ecf0f1;
+  ${media.greaterThan('medium')`
+    background-color: white;
+  `}
 `;
 
 export default PageShell;

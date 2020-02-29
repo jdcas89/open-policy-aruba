@@ -11,6 +11,8 @@ import Input from '../../atoms/Input';
 import { InputContainer } from '../../atoms/Input/InputContainer';
 import useDebounce from '../../../utils/useDebounce';
 import { filterRepresentatives } from '../../../utils/filterRepresentatives';
+import Card from '../../atoms/Card';
+import media from 'styled-media-query';
 
 const Representatives = () => {
   const [representatives] = useRepresentatives();
@@ -34,10 +36,13 @@ const Representatives = () => {
       <H1 m="8px 0" color="primary" fontSize="24px">
         Leden van Parlement
       </H1>
-      <InputContainer>
-        <Label htmlFor="name">Zoeken</Label>
-        <Input id="search" type="text" name="search" onChange={onSearch} />
-      </InputContainer>
+      <Card>
+        <InputContainer>
+          <Label htmlFor="name">Zoeken</Label>
+          <Input id="search" type="text" name="search" onChange={onSearch} />
+        </InputContainer>
+      </Card>
+
       {representativesState.map(r => (
         <RepresentativeComponent key={r.unique_id} representative={r} />
       ))}
@@ -108,21 +113,20 @@ export const BottomSection = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
-const RepresentativeContainer = styled.div`
+const RepresentativeContainer = styled(Card)`
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 16px;
-  padding: 24px 16px;
-  margin: 24px 0;
   background: #ffffff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   @media (min-width: 768px) {
     grid-template-columns: 340px 1fr;
   }
 `;
 
 const RepresentativesContainer = styled.div`
-  padding: 16px;
+  padding: 16px 0;
+  ${media.greaterThan('medium')`
+      padding: 16px;
+  `}
 `;
 
 export default Representatives;

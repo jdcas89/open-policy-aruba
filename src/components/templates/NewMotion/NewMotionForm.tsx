@@ -7,6 +7,7 @@ import RepresentativeSection from '../../organisms/RepresentativesSection';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import { Representative } from '../../../utils/extractRepresentatives';
+import Card from '../../atoms/Card';
 
 interface NewMotionFormProps {
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
@@ -26,7 +27,7 @@ const NewMotionForm: React.FC<NewMotionFormProps> = ({
 }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <Section>
+      <Card>
         <InputContainer>
           <Label htmlFor="name">
             MotieNummer <b>*</b>
@@ -85,7 +86,7 @@ const NewMotionForm: React.FC<NewMotionFormProps> = ({
             ]}
           />
         </InputContainer>
-      </Section>
+      </Card>
       <RepresentativeVotes>
         {representatives.map(r => (
           <RepresentativeSection
@@ -120,13 +121,6 @@ const SaveButton = styled.button`
   padding: 8px 16px;
   min-width: 150px;
   margin: 16px;
-`;
-
-const Section = styled.div`
-  padding: 16px;
-  background-color: white;
-  margin: 16px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 export default NewMotionForm;

@@ -14,6 +14,7 @@ import { StyledLink } from '../../atoms/Link';
 import SocialLinks from '../../molecules/SocialLinks';
 import { useMotionList } from '../../../utils/useMotionList';
 import MotionList from '../MotionList';
+import Card from '../../atoms/Card';
 
 interface DynamicTemplateComponentProps {
   pageContext: {
@@ -42,7 +43,6 @@ const RepresentativeDetail: React.FC<DynamicTemplateComponentProps> = ({
         Terug naar alle leden
       </StyledLink>
       <RepresentativeDetailContainer>
-
         <TopSection>
           <Avatar fluid={pictures.default_avatar} alt={representative.name} />
           <MetaDataItem>
@@ -76,13 +76,10 @@ const RepresentativeDetail: React.FC<DynamicTemplateComponentProps> = ({
   );
 };
 
-const RepresentativeDetailContainer = styled.div`
+const RepresentativeDetailContainer = styled(Card)`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 24px;
-  background-color: white;
-  padding: 24px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 export default RepresentativeDetail;
