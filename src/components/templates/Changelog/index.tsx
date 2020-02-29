@@ -10,12 +10,12 @@ const Changelog = () => {
       </H1>
       <VersionSection>
         <H2 p="16px" m="0" color="primary" fontSize="18px">
-          Version 0.2.0
+          Version 0.2.0 ( 29-02-2020 )
         </H2>
         <ul>
           <li>Changelog & versioning</li>
           <li>Motions per representative</li>
-          <li>First version of new motion request </li>
+          <li>Improvements on new motion request </li>
           <li>Search in representatives</li>
           <li>Footer improvements</li>
           <li> Social section for representatives</li>
@@ -23,7 +23,7 @@ const Changelog = () => {
       </VersionSection>
       <VersionSection>
         <H2 p="16px" m="0" color="primary" fontSize="18px">
-          Version 0.1.0
+          Version 0.1.0 ( 28-02-2020 )
         </H2>
         <ul>
           <li>Project setup </li>
@@ -31,7 +31,7 @@ const Changelog = () => {
           <li>Motion list</li>
           <li>Motion Detail</li>
           <li>Representative detail</li>
-          <li> New Motion page ( eerste versie )</li>
+          <li> New Motion page ( first version )</li>
         </ul>
       </VersionSection>
     </ChangeLogContainer>
