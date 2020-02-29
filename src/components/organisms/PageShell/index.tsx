@@ -46,8 +46,8 @@ const PageShell: React.FC<PageShellProps> = ({ wip, children }) => {
               This project has no real data yet
             </Paragraph>
             <main>{children}</main>
-            <Footer {...footerData} />
           </Content>
+          <Footer {...footerData} />
         </StyledLayout>
       </ThemeProvider>
     </BreakpointProvider>
@@ -76,11 +76,11 @@ const Content = styled.div`
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  background-color: #ecf0f1;
+  background-color: white;
 `;
 
 const StyledLayout = styled.div<{ theme: Theme }>`
-  background-color: #ecf0f1;
+  background-color: white;
   height: 100%;
 `;
 

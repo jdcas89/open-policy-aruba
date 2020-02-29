@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavMenu, { NavLinks } from './NavMenu';
-import Drawer from './Drawer';
-import Logo from '../../atoms/Logo';
 import media from 'styled-media-query';
 import { FAIcon } from '../../atoms/Icon';
 import { faVoteYea } from '@fortawesome/free-solid-svg-icons';
@@ -17,11 +15,11 @@ const NavBar: React.FC<NavBarProps> = ({ type = 'primary', navLinks }) => {
   return (
     <Container>
       <InnerContainer>
-        <LogoAndDrawerContainer>
-          <Link to="/">
-            <FAIcon size={'2x'} color="white" icon={faVoteYea} />
-          </Link>
-        </LogoAndDrawerContainer>
+        {/*<LogoAndDrawerContainer>*/}
+        {/*  <Link to="/">*/}
+        {/*    <FAIcon size={'2x'} color="white" icon={faVoteYea} />*/}
+        {/*  </Link>*/}
+        {/*</LogoAndDrawerContainer>*/}
         <StyledNavMenu type={type} navLinks={navLinks} />
       </InnerContainer>
     </Container>
@@ -47,10 +45,14 @@ const StyledNavMenu = styled(NavMenu)`
 const InnerContainer = styled.div`
   max-width: 1080px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin: auto;
+
+  ${media.greaterThan('medium')`
+     justify-content: flex-end;
+  `}
 `;
 
 const Container = styled.div`

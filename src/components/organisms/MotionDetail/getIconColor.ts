@@ -1,4 +1,4 @@
-export const getIconColor = (vote: string) => {
+export const getVoteIconColor = (vote: string) => {
   switch (vote) {
     case 'Agree': {
       return 'green';

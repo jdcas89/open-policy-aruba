@@ -1,3 +1,5 @@
+import { SocialLink } from '../components/molecules/Footer';
+
 export interface Representative {
   name: string;
   fraction: string;
@@ -7,16 +9,7 @@ export interface Representative {
   number: number;
   role: string;
   description: string;
-  socials: [
-    {
-      type: string;
-      url: string;
-    },
-    {
-      type: string;
-      url: string;
-    },
-  ];
+  socials: SocialLink[];
 }
 
 export const extractRepresentatives: (

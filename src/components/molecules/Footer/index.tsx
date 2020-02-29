@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SmallParagraph } from '../../atoms/Typography';
+import { Paragraph, SmallParagraph } from '../../atoms/Typography';
 import { FAIcon } from '../../atoms/Icon';
 import { faVoteYea } from '@fortawesome/free-solid-svg-icons';
 import { socialLinksData } from '../../../data/social.data';
 import SocialLinks from '../SocialLinks';
 import { Credits } from '../../atoms/Credits';
+import { StyledLink } from '../../atoms/Link';
 
 export interface SocialLink {
   type: string;
@@ -27,6 +28,17 @@ const Footer: React.FC<FooterProps> = ({ copy }) => {
         <SocialLinks type={'secondary'} socialLinks={socialLinksData} />
         <Copyright>{copy}</Copyright>
       </InnerContainer>
+
+      <Paragraph m={0} textAlign="center" color="white">
+        Version 0.1
+      </Paragraph>
+      <StyledLink
+        style={{ textAlign: 'center' }}
+        type="white"
+        to={'/changelog'}
+      >
+        Release notes
+      </StyledLink>
       <Credits />
     </FooterContainer>
   );
@@ -64,11 +76,6 @@ const LogoAndLinksContainer = styled.div`
 
 const FooterContainer = styled.footer`
   background: linear-gradient(90deg, #3498db 0%, #2980b9 100%);
-  padding: 8px 0;
-  max-width: 1440px;
-
-  @media (max-width: 768px) {
-  }
 `;
 
 export default Footer;

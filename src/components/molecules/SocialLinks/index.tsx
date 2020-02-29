@@ -43,14 +43,14 @@ const SocialLinksContainer = styled.div<{ vertical?: boolean }>`
   margin: 0;
   align-items: flex-end;
   justify-content: center;
-  z-index: 1000;
 `;
 
 const StyledIcon = styled(FontAwesomeIcon)<{
   color: string;
   theme: Theme;
 }>`
-  color: ${({ color }) => (color === 'primary' ? 'black' : 'white')};
+  color: ${({ color, theme }) =>
+    color === 'primary' ? theme.colors.primary : 'white'};
   margin: 4px;
   @media (max-width: 768px) {
     font-size: 24px;
