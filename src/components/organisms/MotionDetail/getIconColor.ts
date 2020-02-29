@@ -1,9 +1,9 @@
 export const getVoteIconColor = (vote: string) => {
   switch (vote) {
-    case 'Agree': {
+    case 'pro': {
       return 'green';
     }
-    case 'Disagree': {
+    case 'against': {
       return 'red';
     }
     default: {

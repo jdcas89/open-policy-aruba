@@ -28,10 +28,10 @@ const RepresentativeVote: React.FC<{ vote: ExtendedRepresentative }> = ({
 const Vote = styled.td<{ vote: string }>`
   color: ${({ vote }) => {
     switch (vote) {
-      case 'Agree': {
+      case 'pro': {
         return 'green';
       }
-      case 'Disagree': {
+      case 'against': {
         return 'red';
       }
       default: {

@@ -20,15 +20,15 @@
   "voting": [
     {
       "id": "jayden_medina_1",
-      "vote": "Agree"
+      "vote": "pro"
     },
     {
       "id": "lorraine_duggan_1",
-      "vote": "Disagree"
+      "vote": "against"
     },
     {
       "id": "clarice_adamson_1",
-      "vote": "Afwezig"
+      "vote": "absent"
     }
   ],
   "name": "motie-6-avp-mbt-besluit-om-de-conclusies-van-het-rapport-ser-van-11-2014-in-overweging-te-neme",

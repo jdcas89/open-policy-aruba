@@ -25,18 +25,18 @@ const RepresentativeSection: React.FC<{
           name={`${representative.unique_id}-vote`}
           options={[
             {
-              id: 'voor',
-              value: 'voor',
+              id: 'pro',
+              value: 'pro',
               text: 'Voor',
             },
             {
-              id: 'tegen',
-              value: 'tegen',
+              id: 'against',
+              value: 'against',
               text: 'Tegen',
             },
             {
-              id: 'afwezig',
-              value: 'afwezig',
+              id: 'absent',
+              value: 'absent',
               text: 'Afwezig',
             },
           ]}

@@ -33,9 +33,9 @@ const MotionListItem: React.FC<MotionListItemProps> = ({
         <H3
           m={0}
           color={
-            representativeVote === 'Agree'
+            representativeVote === 'pro'
               ? 'green'
-              : representativeVote === 'Disagree'
+              : representativeVote === 'against'
               ? 'red'
               : 'black'
           }
