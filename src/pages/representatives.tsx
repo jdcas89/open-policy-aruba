@@ -3,7 +3,7 @@ import SEO from '../components/seo';
 import PageShell from '../components/organisms/PageShell';
 import Representatives from '../components/templates/Representatives';
 
-class HomePage extends React.Component {
+class RepresentativesPage extends React.Component {
   render() {
     return (
       <PageShell>
@@ -14,4 +14,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage;
+export default RepresentativesPage;

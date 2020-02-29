@@ -14,7 +14,7 @@
           "url": "https://facebook.com/test"
         },
         {
-          "type": "faWebsite",
+          "type": "faGlobe",
           "url": "https://test.com"
         }
       ]
@@ -33,7 +33,7 @@
           "url": "https://facebook.com/test"
         },
         {
-          "type": "faWebsite",
+          "type": "faGlobe",
           "url": "https://test.com"
         }
       ]
@@ -52,7 +52,7 @@
           "url": "https://facebook.com/test"
         },
         {
-          "type": "faWebsite",
+          "type": "faGlobe",
           "url": "https://test.com"
         }
       ]

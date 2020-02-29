@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Location, LocationContext } from '@reach/router';
 import { StyledLink } from '../../atoms/Link';
+import ButtonLink from '../../atoms/ButtonLink';
 
 interface NavLink {
   path: string;
@@ -39,6 +40,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ navLinks, type, ...props }) => {
               </StyledLink>
             );
           })}
+          <ButtonLink to={'/new'}>Nieuwe Motie</ButtonLink>
         </NavMenuContainer>
       )}
     </Location>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRepresentatives } from '../../../utils/useRepresentatives';
 import styled from 'styled-components';
 import { H1, Paragraph } from '../../atoms/Typography';
@@ -7,15 +7,38 @@ import { Label, MetaDataItem } from '../../organisms/MotionMetaData';
 import { usePictures } from '../../../utils/usePictures';
 import GatsbyImage from 'gatsby-image';
 import { StyledLink } from '../../atoms/Link';
+import Input from '../../atoms/Input';
+import { InputContainer } from '../../atoms/Input/InputContainer';
+import useDebounce from '../../../utils/useDebounce';
+import { filterRepresentatives } from '../../../utils/filterRepresentatives';
 
 const Representatives = () => {
   const [representatives] = useRepresentatives();
+
+  const [representativesState, setRepresentativesState] = useState(
+    representatives,
+  );
+  const [search, setSearch] = useState();
+  const debouncedValue = useDebounce(search, 800);
+
+  const onSearch = e => {
+    setSearch(e.target.value.toLowerCase());
+  };
+
+  useEffect(() => {
+    setRepresentativesState(filterRepresentatives(representatives, search));
+  }, [debouncedValue]);
+
   return (
     <RepresentativesContainer>
-      <H1 p="16px" m="0" color="primary" fontSize="24px">
+      <H1 m="8px 0" color="primary" fontSize="24px">
         Leden van Parlement
       </H1>
-      {representatives.map(r => (
+      <InputContainer>
+        <Label htmlFor="name">Zoeken</Label>
+        <Input id="search" type="text" name="search" onChange={onSearch} />
+      </InputContainer>
+      {representativesState.map(r => (
         <RepresentativeComponent key={r.unique_id} representative={r} />
       ))}
     </RepresentativesContainer>
@@ -92,12 +115,14 @@ const RepresentativeContainer = styled.div`
   padding: 24px 16px;
   margin: 24px 0;
   background: #ffffff;
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   @media (min-width: 768px) {
     grid-template-columns: 340px 1fr;
   }
 `;
 
-const RepresentativesContainer = styled.div``;
+const RepresentativesContainer = styled.div`
+  padding: 16px;
+`;
 
 export default Representatives;
