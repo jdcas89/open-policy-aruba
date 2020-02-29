@@ -11,7 +11,7 @@ const Changelog = () => {
       </H1>
       <Card>
         <H2 p="16px" m="0" color="primary" fontSize="18px">
-          Version 0.2.0 ( 29-02-2020 )
+          Version 0.2.1 ( 29-02-2020 )
         </H2>
         <ul>
           <li>Changelog & versioning</li>
@@ -20,6 +20,8 @@ const Changelog = () => {
           <li>Search in representatives</li>
           <li>Footer improvements</li>
           <li> Social section for representatives</li>
+          <li> Better media query usage</li>
+          <li> Added fraction logo for each representative</li>
         </ul>
       </Card>
       <Card>

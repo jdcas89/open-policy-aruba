@@ -1,8 +1,8 @@
 import React from 'react';
 import { ExtendedRepresentative } from '../../../utils/mapRepresentativesToMotions';
 import { FAIcon } from '../../atoms/Icon';
-import { getVoteIcon } from '../MotionDetail/getIcon';
-import { getVoteIconColor } from '../MotionDetail/getIconColor';
+import { getVoteIcon } from '../../organisms/MotionDetail/getIcon';
+import { getVoteIconColor } from '../../organisms/MotionDetail/getIconColor';
 import { StyledLink } from '../../atoms/Link';
 import styled from 'styled-components';
 
@@ -11,7 +11,10 @@ const RepresentativeVote: React.FC<{ vote: ExtendedRepresentative }> = ({
 }) => (
   <tr>
     <Vote vote={vote.vote}>
-      <FAIcon icon={getVoteIcon(vote.vote)} color={getVoteIconColor(vote.vote)} />
+      <FAIcon
+        icon={getVoteIcon(vote.vote)}
+        color={getVoteIconColor(vote.vote)}
+      />
     </Vote>
     <td>
       <StyledLink type="primary" to={`/representatives/${vote.unique_id}`}>

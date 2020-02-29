@@ -7,6 +7,7 @@ import { socialLinksData } from '../../../data/social.data';
 import SocialLinks from '../SocialLinks';
 import { Credits } from '../../atoms/Credits';
 import { StyledLink } from '../../atoms/Link';
+import media from 'styled-media-query';
 
 export interface SocialLink {
   type: string;
@@ -30,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({ copy }) => {
       </InnerContainer>
 
       <Paragraph m={0} textAlign="center" color="white">
-        Version 0.2.0
+        Version 0.2.1
       </Paragraph>
       <StyledLink
         style={{ textAlign: 'center' }}
@@ -47,13 +48,13 @@ const Footer: React.FC<FooterProps> = ({ copy }) => {
 const InnerContainer = styled.div`
   max-width: 1080px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  margin: 0 auto;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
+  grid-template-columns: 1fr;
+  justify-items: center;
+  ${media.greaterThan('medium')`
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+  `}
 `;
 
 const Copyright = styled(SmallParagraph)`
@@ -62,10 +63,10 @@ const Copyright = styled(SmallParagraph)`
   font-weight: 600;
   color: #fff;
 
-  @media (min-width: 768px) {
+  ${media.greaterThan('medium')`
     justify-self: end;
     margin: 16px 0;
-  }
+  `}
 `;
 
 const LogoAndLinksContainer = styled.div`

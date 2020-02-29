@@ -2,6 +2,7 @@ import React from 'react';
 import { Paragraph } from '../../atoms/Typography';
 import styled from 'styled-components';
 import { Motion } from '../../../utils/extractMotions';
+import media from 'styled-media-query';
 
 const MotionMetaData: React.FC<{ motion: Motion }> = ({ motion }) => {
   const voteAgainst = motion.voting.filter(vote => vote.vote === 'Disagree');
@@ -60,9 +61,9 @@ const MetaDataContainer = styled.div`
   padding: 8px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  @media (min-width: 768px) {
+  ${media.greaterThan('medium')`
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
+  `}
 `;
 
 export const Span = styled.span<{ color?: string }>`

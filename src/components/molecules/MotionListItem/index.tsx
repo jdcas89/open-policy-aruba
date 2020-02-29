@@ -2,11 +2,10 @@ import React from 'react';
 import { Motion } from '../../../utils/extractMotions';
 import { StyledLink } from '../../atoms/Link';
 import { H3, Paragraph } from '../../atoms/Typography';
-import MotionMetaData from '../MotionMetaData';
-import styled from 'styled-components';
+import MotionMetaData from '../../organisms/MotionMetaData';
 import { Representative } from '../../../utils/extractRepresentatives';
-import { getVoteIcon } from '../MotionDetail/getIcon';
-import { getVoteIconColor } from '../MotionDetail/getIconColor';
+import { getVoteIcon } from '../../organisms/MotionDetail/getIcon';
+import { getVoteIconColor } from '../../organisms/MotionDetail/getIconColor';
 import { FAIcon } from '../../atoms/Icon';
 import Card from '../../atoms/Card';
 

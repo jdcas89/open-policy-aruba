@@ -2,8 +2,9 @@ import React from 'react';
 import { Motion } from '../../../utils/extractMotions';
 import styled from 'styled-components';
 import { H1 } from '../../atoms/Typography';
-import MotionListItem from '../MotionListItem';
+import MotionListItem from '../../molecules/MotionListItem';
 import { Representative } from '../../../utils/extractRepresentatives';
+import media from 'styled-media-query';
 
 interface MotionListProps {
   motions: Motion[];
@@ -28,8 +29,8 @@ const MotionList: React.FC<MotionListProps> = ({ motions, representative }) => {
 };
 
 const MotionListContainer = styled.div`
-  @media (min-width: 768px) {
+  ${media.greaterThan('medium')`
     padding: 16px;
-  }
+  `}
 `;
 export default MotionList;
