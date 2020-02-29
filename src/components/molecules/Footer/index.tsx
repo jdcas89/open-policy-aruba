@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ copy }) => {
       </InnerContainer>
 
       <Paragraph m={0} textAlign="center" color="white">
-        Version 0.1
+        Version 0.2.0
       </Paragraph>
       <StyledLink
         style={{ textAlign: 'center' }}
