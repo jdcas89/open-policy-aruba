@@ -38,10 +38,11 @@ const RepresentativeDetail: React.FC<DynamicTemplateComponentProps> = ({
   const representative = data;
   return (
     <PageShell>
+      <StyledLink type="primary" to={`/representatives/`}>
+        Terug naar alle leden
+      </StyledLink>
       <RepresentativeDetailContainer>
-        <StyledLink type="primary" to={`/representatives/`}>
-          Terug naar alle leden
-        </StyledLink>
+
         <TopSection>
           <Avatar fluid={pictures.default_avatar} alt={representative.name} />
           <MetaDataItem>
@@ -75,14 +76,13 @@ const RepresentativeDetail: React.FC<DynamicTemplateComponentProps> = ({
   );
 };
 
-const MotionsSection = styled.div``;
-
 const RepresentativeDetailContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 24px;
   background-color: white;
   padding: 24px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 export default RepresentativeDetail;

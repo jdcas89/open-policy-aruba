@@ -126,6 +126,7 @@ const Section = styled.div`
   padding: 16px;
   background-color: white;
   margin: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 export default NewMotionForm;

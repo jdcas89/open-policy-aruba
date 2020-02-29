@@ -23,10 +23,10 @@ const MotionDetail: React.FC<DynamicTemplateComponentProps> = ({
   return (
     <PageShell>
       <MotionDetailContainer>
+        <StyledLink type="primary" to={'/'}>
+          Terug naar alle moties
+        </StyledLink>
         <MotionMetaDataCard>
-          <StyledLink type="primary" to={'/'}>
-            Terug naar alle moties
-          </StyledLink>
           <H1 color="primary" fontSize="24px">
             {data.title}
           </H1>
@@ -82,7 +82,7 @@ const MotionMetaDataCard = styled.div`
   margin: 16px auto;
   padding: 16px;
   background: #ffffff;
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 const MotionDetailContainer = styled.div`
