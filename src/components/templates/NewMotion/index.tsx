@@ -8,7 +8,7 @@ import { useRepresentatives } from '../../../utils/useRepresentatives';
 import { Representative } from '../../../utils/extractRepresentatives';
 import media from 'styled-media-query';
 import { RepresentativeRef } from '../../../utils/extractMotions';
-import RepresentativeSection from '../../organisms/RepresentativesSection';
+import RepresentativeSection from '../../molecules/RepresentativesSection';
 import NewMotionForm from './NewMotionForm';
 import { H1 } from '../../atoms/Typography';
 

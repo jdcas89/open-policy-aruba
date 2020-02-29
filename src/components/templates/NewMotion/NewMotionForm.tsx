@@ -3,7 +3,7 @@ import { InputContainer } from '../../atoms/Input/InputContainer';
 import { Label } from '../../atoms/Input/Label';
 import Input from '../../atoms/Input';
 import Select from '../../atoms/Input/Dropdown';
-import RepresentativeSection from '../../organisms/RepresentativesSection';
+import RepresentativeSection from '../../molecules/RepresentativesSection';
 import styled from 'styled-components';
 import media from 'styled-media-query';
 import { Representative } from '../../../utils/extractRepresentatives';

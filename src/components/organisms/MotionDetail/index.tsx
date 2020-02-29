@@ -7,8 +7,9 @@ import MotionMetaData from '../MotionMetaData';
 import { H1 } from '../../atoms/Typography';
 import { useRepresentatives } from '../../../utils/useRepresentatives';
 import { mapRepresentativesToMotion } from '../../../utils/mapRepresentativesToMotions';
-import RepresentativeVote from '../RepresentativeVote';
+import RepresentativeVote from '../../molecules/RepresentativeVote';
 import Card from '../../atoms/Card';
+import media from 'styled-media-query';
 
 interface DynamicTemplateComponentProps {
   pageContext: {
@@ -73,15 +74,12 @@ const MotionDetail: React.FC<DynamicTemplateComponentProps> = ({
 };
 
 const StyledTable = styled.table`
-  max-width: 100%;
-  @media (min-width: 768px) {
-    max-width: 100%;
-  }
+  width: 100%;
 `;
 
 const MotionDetailContainer = styled.div`
-  @media (min-width: 768px) {
+  ${media.greaterThan('medium')`
     padding: 16px;
-  }
+  `}
 `;
 export default MotionDetail;

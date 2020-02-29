@@ -15,6 +15,7 @@ import SocialLinks from '../../molecules/SocialLinks';
 import { useMotionList } from '../../../utils/useMotionList';
 import MotionList from '../MotionList';
 import Card from '../../atoms/Card';
+import FractionLogo from '../../atoms/FractionLogo';
 
 interface DynamicTemplateComponentProps {
   pageContext: {
@@ -53,7 +54,9 @@ const RepresentativeDetail: React.FC<DynamicTemplateComponentProps> = ({
         <BottomSection>
           <MetaDataItem>
             <Label>Fractie:</Label>
-            <Paragraph>{representative.fraction}</Paragraph>
+            <FractionLogo
+              fraction={representative.fraction.toLocaleLowerCase()}
+            />
           </MetaDataItem>
           <MetaDataItem>
             <Label>Rol:</Label>
